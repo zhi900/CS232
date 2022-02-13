@@ -5,17 +5,14 @@
 int get_valid_number();
 bool is_prime(int x);
 
-//main() uses a sentinel controlled loop to test the primality of numbers
-//, without knowing how many numbers to be tested.
-// -1 is the sentinel value
-// the loop repeats the cycle of read->test->process->read ...
+
 int main()
 {
 	int n;
        
-	while (true) { //test
-		//process
-     n = get_valid_number(); //read
+while (true) { 
+		
+     n = get_valid_number(); 
      if(n==-1){ 
         printf("Program exited");
     return 0;
@@ -37,7 +34,7 @@ int main()
 }
 
 bool is_prime(int n) {
-	//if n is divisible by any number greater or equal to 2 and less than n, then n is not prime.
+	
 	for (int i = 2; i < n; i++) {
 		if (n%i == 0) {
 			return false;;
@@ -47,9 +44,7 @@ bool is_prime(int n) {
 }
 
 int get_valid_number(void) {
-	//The valid number is either -1 (to exit the program) or an integer greater than 2.
-	//A loop is used to implement input validation, that is, user will be asked to 
-	//enter a valid number over and over again until a valid number is received.
+	
         int n;
 	printf("Please enter an integer greater than 2 to test its primality, enter -1 to exit \n");
 	scanf("%d", &n);
