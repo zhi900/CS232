@@ -1,6 +1,3 @@
-/* Copyright (c) 2020, Dive into Systems, LLC (https://diveintosystems.org/)
- */
-
 #include <stdio.h>
 
 /* function prototypes: */
@@ -32,6 +29,19 @@ void printArray(int a[], int size) {
  *  Postcondition:
  *  a is sorted in ascending order 
  */
+ void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 void bubbleSort(int a[], int size) {
-    //TODO: write this function
+    
+   int i, j;
+   for (i = 0; i < size-1; i++)      
+  
+       // Last i elements are already in place   
+       for (j = 0; j < size-i-1; j++) 
+           if (a[j] > a[j+1])
+              swap(&a[j], &a[j+1]);
 }
