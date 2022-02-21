@@ -8,12 +8,12 @@ void set_bits(unsigned * x,
              unsigned end,
              unsigned *v) {
     int len = end - start+1;
-    for(int i =0;i<len;i++){
+    for(int i =0;i<len;++i){
       if(v[i] == 1){
         (*x)=(*x) | (1 <<(start+i));
       }
       else{
-        (*x)=(*x) & ((1<<(start + i)));
+        (*x)=(*x) & (~(1<<(start + i)));
       }
     }
 }
