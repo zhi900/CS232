@@ -11,17 +11,16 @@ node_t * construct_3() {
 	node_t* y;
 	 node_t* z;
 
-	// Allocate the pointees
+	
 	x = malloc(sizeof(node_t));
 	y = malloc(sizeof(node_t));
 	z = malloc(sizeof(node_t));
 
-	// Put the numbers in the pointees
+	
 	x->value = 1;
 	y->value = 2;
 	z->value = 3;
 
-	// Put the pointers in the pointees
 	x->next = y;
 	y->next = z;
 	z->next = x;
