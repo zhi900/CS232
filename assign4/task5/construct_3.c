@@ -6,24 +6,27 @@ typedef struct node {
 } node_t;
 
 node_t * construct_3() {
-  node_t *x;
-  node_t *y;
-  node_t *z;
+ 
+   node_t* x;
+	node_t* y;
+	 node_t* z;
 
-  x = malloc(sizeof(node_t));
-  y = malloc(sizeof(node_t));
-  z = malloc(sizeof(node_t));
+	// Allocate the pointees
+	x = malloc(sizeof(node_t));
+	y = malloc(sizeof(node_t));
+	z = malloc(sizeof(node_t));
 
-  x->value = 1;
-  y->value = 2;
-  z->value = 3;
+	// Put the numbers in the pointees
+	x->value = 1;
+	y->value = 2;
+	z->value = 3;
 
-  x->next = y;
-  y->next = z;
-  z->next = x;
-  
+	// Put the pointers in the pointees
+	x->next = y;
+	y->next = z;
+	z->next = x;
 
-  
+  return x;
 }
 
 //You can ignore the following code for testing
