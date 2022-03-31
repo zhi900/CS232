@@ -37,7 +37,7 @@ int main (int argc, char ** argv) {
 }
 
 void dump_all(node_t * head) {
-    printf("head ->");
+    printf("head -> ");
     node_t * cur = head;
     while(cur != NULL) {
         printf("%s ", cur->str);
